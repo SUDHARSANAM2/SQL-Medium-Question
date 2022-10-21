@@ -1,0 +1,10 @@
+QN no: 10
+
+Show first name, last name and role of every person that is either patient or physician.
+The roles are either "Patient" or "Physician"
+
+solution:
+
+select first_name,last_name ,'Patient'as role from patients
+ union
+ select first_name,last_name,'physician' from physicians
