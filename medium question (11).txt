@@ -1,0 +1,10 @@
+Qn no:11
+
+Show all allergies ordered by popularity. Remove 'NKA' and NULL values from query.
+
+solution:
+
+select allergies , count(*) from patients
+ where allergies is not null
+ group by allergies
+ order by count( allergies) desc
