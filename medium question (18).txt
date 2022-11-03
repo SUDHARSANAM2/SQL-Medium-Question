@@ -1,0 +1,12 @@
+Qn no:19
+
+Show first_name, last_name, and the total number of admissions attended for each physician.
+
+Every admission has been attended by a physician.
+
+Solution:
+select first_name,last_name,count(*) from admissions
+ join physicians on physicians.physician_id = admissions.attending_physician_id
+ group by attending_physician_id
+
+ 
