@@ -1,0 +1,15 @@
+
+Qn no:21
+
+
+For every admission, display the patient's full name, their admission diagnosis, and their physician's full name who diagnosed their problem.
+
+Solution:
+
+select 
+ concat(p.first_name,' ',p.last_name) as patients_Name,
+ diagnosis,
+ concat(ph.first_name,' ',ph.last_name) as physicians_Name
+from patients p
+ join admissions a on a.patient_id = p.patient_id
+ join physicians ph on ph.physician_id = a.attending_physician_id
